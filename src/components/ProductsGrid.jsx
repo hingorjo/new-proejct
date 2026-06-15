@@ -120,57 +120,64 @@ const ProductsGrid = () => {
                 exit={{ opacity: 0, y: -40 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: (index % 6) * 0.1 }}
-                className="group relative flex flex-col justify-between cursor-pointer"
+                className="group relative flex flex-col justify-between cursor-pointer bg-base/90 backdrop-blur-md border border-secondary/25 p-6 rounded-sm shadow-md transition-all duration-500 hover:shadow-2xl hover:border-secondary/60 hover:bg-base/95 after:absolute after:inset-2 after:border after:border-secondary/10 hover:after:border-secondary/30 after:transition-all after:duration-500 after:pointer-events-none"
                 onClick={() => setActiveProduct(product)}
               >
-                {/* Product Container with Mughal Arch Background Frame */}
-                <div className="relative w-full aspect-[3/4] overflow-hidden bg-primary/5 border border-secondary/15 rounded-sm p-8 flex items-center justify-center transition-all duration-500 hover:shadow-2xl hover:border-secondary/40">
-                  
-                  {/* Ogee Arch Decorative SVG Background */}
-                  <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40 group-hover:opacity-100 transition-opacity duration-500">
-                    <svg viewBox="0 0 100 120" className="w-full h-full p-4 text-secondary/30 fill-none stroke-current" strokeWidth="0.5">
-                      <path d="M 10,110 L 10,50 C 10,35 30,30 50,10 C 70,30 90,35 90,50 L 90,110 Z" />
-                      <path d="M 14,110 L 14,52 C 14,39 32,34 50,16 C 68,34 86,39 86,52 L 86,110" className="opacity-50" strokeWidth="0.25" />
+                {/* Product Image Showcase with Mughal Arch Backdrop */}
+                <div className="relative w-full aspect-square flex items-center justify-center overflow-hidden mb-6 p-4">
+                  {/* Arch Outline SVG Background */}
+                  <div className="absolute inset-0 z-0 flex items-center justify-center opacity-20 group-hover:opacity-60 transition-opacity duration-500">
+                    <svg viewBox="0 0 100 120" className="w-full h-full text-secondary fill-none stroke-current" strokeWidth="0.75">
+                      <path d="M 15,105 L 15,45 C 15,30 32,25 50,8 C 68,25 85,30 85,45 L 85,105 Z" />
                     </svg>
                   </div>
 
-                  {/* The unclipped product packaging */}
+                  {/* Clean, Sharp Product Image (No blur) */}
                   <img 
                     src={product.img} 
                     alt={product.name}
-                    className="relative z-10 max-w-[85%] max-h-[85%] object-contain drop-shadow-xl transition-all duration-700 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:blur-[6px] group-hover:opacity-30"
+                    className="relative z-10 max-w-[85%] max-h-[85%] object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.12)] group-hover:drop-shadow-[0_20px_25px_rgba(212,175,55,0.25)] transition-all duration-700 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-2"
                   />
+                </div>
+
+                {/* Typography and Actions Area */}
+                <div className="relative z-10 flex flex-col items-center mt-auto">
+                  <span className="text-[9px] tracking-[0.25em] text-secondary font-semibold uppercase mb-1.5">
+                    {product.id === 9 ? "Collector's Box" : "Imperial Selection"}
+                  </span>
                   
-                  {/* Glassmorphic Hover Overlay */}
-                  <div className="absolute inset-0 z-20 bg-primary/55 backdrop-blur-[3px] opacity-0 group-hover:opacity-100 transition-all duration-700 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center gap-3 p-8">
+                  <h3 className="text-xl font-serif text-primary text-center mb-1 group-hover:text-accent transition-colors duration-300">
+                    {product.name}
+                  </h3>
+                  
+                  <p className="text-secondary font-medium tracking-wide text-sm mb-4">
+                    {product.price}
+                  </p>
+
+                  {/* Animated Gold Line */}
+                  <div className="w-10 h-px bg-secondary/25 group-hover:w-20 transition-all duration-500 mb-6"></div>
+
+                  {/* Primary E-commerce Actions */}
+                  <div className="w-full grid grid-cols-2 gap-3">
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
                         setActiveProduct(product);
                       }}
-                      className="w-full py-3 bg-base text-primary hover:bg-secondary hover:text-primary text-center uppercase tracking-widest text-[10px] font-semibold transition-all duration-300 shadow-md"
+                      className="py-2.5 bg-primary/5 border border-primary/20 text-primary hover:bg-primary hover:text-white text-center uppercase tracking-widest text-[9px] font-semibold transition-all duration-300 rounded-sm"
                     >
-                      Inspect Blend
+                      Inspect
                     </button>
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
                         addToCart(product);
                       }}
-                      className="w-full py-3 bg-secondary text-primary hover:bg-white hover:text-primary text-center uppercase tracking-widest text-[10px] font-semibold transition-all duration-300 shadow-md"
+                      className="py-2.5 bg-secondary text-primary border border-secondary hover:bg-primary hover:text-white text-center uppercase tracking-widest text-[9px] font-bold transition-all duration-300 shadow-sm rounded-sm"
                     >
-                      Add to Cart Pouch
+                      + Pouch
                     </button>
                   </div>
-                </div>
-
-                <div className="text-center mt-6 z-10">
-                  <h3 className="text-lg font-serif text-primary mb-1 group-hover:text-accent transition-colors duration-300">
-                    {product.name}
-                  </h3>
-                  <p className="text-secondary font-medium tracking-wide text-sm">
-                    {product.price}
-                  </p>
                 </div>
               </motion.div>
             ))}
