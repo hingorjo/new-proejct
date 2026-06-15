@@ -41,7 +41,7 @@ const recipes = [
   },
   {
     id: 2,
-    title: "Dehlvi Slow-Cooked Nihari",
+    title: "Burns Road Slow-Cooked Nihari",
     desc: "A velvety, slow-cooked stew of tender beef shank, simmered overnight with traditional heritage spices.",
     prepTime: "15 mins",
     cookTime: "4-6 hours",
@@ -53,7 +53,7 @@ const recipes = [
       name: "Nihari Royal Blend",
       price: "$16",
       img: "/products/Nihari Masala.jpeg",
-      desc: "Slow-cook heritage spices to create the classic rich Delhi Nihari gravy."
+      desc: "Slow-cook heritage spices to create the classic rich Karachi Nihari gravy."
     },
     bgImage: "/products/legacy.jpeg",
     ingredients: [

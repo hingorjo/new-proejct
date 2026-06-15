@@ -14,7 +14,7 @@ const products = [
   {
     id: 2,
     name: "Nihari Royal Blend",
-    desc: "Slow-cook heritage spices to create the classic rich Delhi Nihari gravy.",
+    desc: "Slow-cook heritage spices to create the classic rich Karachi Nihari gravy.",
     price: "$16",
     img: "/products/Nihari Masala.jpeg"
   },

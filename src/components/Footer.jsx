@@ -44,7 +44,7 @@ const Footer = () => {
           </a>
           <p className="flex items-center gap-3 text-base/80 font-light text-sm">
             <MapPin size={18} />
-            The Spice Bazaar, Old Delhi, India
+            Empress Market, Karachi, Pakistan
           </p>
         </div>
 

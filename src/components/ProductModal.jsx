@@ -7,13 +7,13 @@ const spiceDetails = {
   "Shahi Biryani Masala": {
     ingredients: "Black cardamom, green cardamom, mace, nutmeg, cinnamon, cloves, coriander, bay leaf, red chilli, cumin, fennel, black pepper.",
     usage: "Add 2 tablespoons per 500g of basmati rice and meat. Marinate meat with yogurt and spices for 2 hours before slow-cooking and layering.",
-    origin: "Awadh / Lucknow",
+    origin: "Lahore / Walled City Heritage",
     notes: "Perfect for both chicken and lamb biryanis."
   },
   "Nihari Royal Blend": {
     ingredients: "Dry ginger (sont), fennel seeds, black cardamom, nutmeg, mace, cinnamon, black pepper, cloves, bay leaf, stone flower (kalpasi).",
     usage: "Slow-cook meat (beef or lamb shank) with onions and spice blend for 4-6 hours. Dissolve wheat flour in water and stir in during the final 30 minutes to thicken.",
-    origin: "Old Delhi / Shahjahanabad",
+    origin: "Karachi / Burns Road",
     notes: "Traditionally served with thin ginger juliennes, fresh coriander, and lemon."
   },
   "Shami Kabab Spice": {
@@ -37,13 +37,13 @@ const spiceDetails = {
   "Royal Fish Masala": {
     ingredients: "Yellow mustard seeds, fenugreek seeds, turmeric, coriander, cumin, amchur (dry mango powder), dry garlic, ajwain.",
     usage: "Create a rub with spice mix, lemon juice, and oil. Coat fish fillets and set aside for 30 minutes. Shallow fry or simmer in coconut milk curry.",
-    origin: "Konkan Coastline",
+    origin: "Karachi Coastline / Arabian Sea",
     notes: "Adds a vibrant, tangy acidity that cuts through fresh seafood beautifully."
   },
   "Sabzi Masala Blend": {
     ingredients: "Cumin, coriander, turmeric, dry ginger, amchur, asafoetida (hing), black pepper, fenugreek leaves.",
     usage: "Sprinkle 1 tsp during the last 5 minutes of stir-frying mixed seasonal vegetables or okra to lock in fresh aromas without burning the spices.",
-    origin: "Varanasi / Banaras",
+    origin: "Swat Valley / Organic Farms",
     notes: "A versatile, everyday flavor enhancer for vegetarian cooking."
   },
   "Kala Namak (Black Salt)": {
